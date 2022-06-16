@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+/* Main ad image*/
+.advert img {
+    border: 3px solid rgb(34, 187, 34);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.main-advert img{
+    margin-top: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width: 800px;
+}
+/* slideshow */
+.four-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: rgb(255, 224, 46);
+    border: 2px solid rgb(34, 187, 34);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot.active, .dot:hover {
+    background-color: rgb(34, 187, 34);
+}
+.main-advert {
+    position: relative;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+/* next and prev button for slideshow */
+  .next {
+    right: 3px;
+    border-radius: 3px 0 0 3px;
+ }
+ .prev {
+     left: 3px;
+ }
+  .prev:hover, .next:hover {
+    background-color: rgb(255, 224, 46);
+    opacity: 0.7;
+  }
+  /* Main ad caption */
+.caption-text {
+    text-align: center;
+    background-color: rgb(255, 224, 46);
+    width: 100%;
+    padding: 40px 0px;
+    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.7;
+}
+/* Main ad animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
+}
+/* Bottom ad images */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.row img {
+    margin-top: 40px;
+    height: 300px;
+    width: 500px;
+}
+.column {
+    padding: 20px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* bottom ad caption text */
+.bottom-caption-text {
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(255, 224, 46);
+    padding: 20px 0px;
+}
+

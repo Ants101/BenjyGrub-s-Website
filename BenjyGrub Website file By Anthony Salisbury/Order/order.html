@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Food Service">
+    <meta name="keywords" content="BenjyGrub, Sandwich Bar, Sandwich, Food, Drinks">
+    <meta name="author" content="Anthony">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="..\nav-footer.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+          <img src="..\Images/BG_Logo.png" alt="BenjyGrub's Logo">
+        </div>
+          <ul class="nav">
+            <li><a href="..\index.html">Home</a></li>
+            <li><a href="..\Menu\menu.html">Menu</a></li>
+            <li><a class="active" href="#">Order</a></li>
+            <li><a href="..\Hire us\hire-us.html">Hire us</a></li>
+            <li><a href="..\About us\about-us.html">About us</a></li>
+            <li><a href="..\Contact us\contact-us.html">Contact us</a></li>
+          </ul>  
+        </div>
+      </div>
+      <hr>
+      <!-- Page Content -->
+      <header>
+        <h2>Order</h2>
+      </header>
+      <div class="form-row">
+        <div class="col-75">
+          <div class="form-container">
+            <form action="#">
+              <div class="form-row">
+                <div class="col-50">
+                  <label for="food-item">Food</label>
+                  <select id="SelectOne" onchange="getPrice()">
+                    <option value="Empty" disabled selected>Please select option</option>
+                    <option value="1">BLT Sandwich - £2.50</option>
+                    <option value="2">Ham Sandwich - £2.00</option>
+                    <option value="3">Cheese Sandwich - £2.00</option>
+                    <option value="4">Jam Sandwich - £1.75</option>
+                    <option value="5">Fries - £2.00</option>
+                    <option value="6">Apple - £0.50</option>
+                    <option value="7">Garlic Bread - £2.00</option>
+                  </select>
+                  <label for="quantity">Quantity</label>
+                  <select id="SelectQtyOne" onchange="getPrice()">
+                    <option value="Empty" disabled selected>Please select option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <label for="drink-item">Drinks</label>
+                  <select id="SelectTwo" onchange="getPrice()">
+                    <option value="Empty" disabled selected>Please select option</option>
+                    <option value="Water">Water - £1.00</option>
+                    <option value="Cola">Cola - £1.50</option>
+                    <option value="Lemonade">Lemonade - £1.25</option>
+                    <option value="Coffee">Coffee - £1.75</option>
+                    <option value="Fanta">Fanta - £1.50</option>
+                    <option value="Tea">Tea - £2.00</option>
+                  </select>
+                  <label for="quantity">Quantity</label>
+                  <select id="SelectQtyTwo" onchange="getPrice()">
+                    <option value="Empty" disabled selected>Please select option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <div class="totals">
+                    <label for="subtotal">Sub Total</label>
+                    <p id="sub-total">£0</p>
+                    <label for="total">Total</label>
+                    <p id="total">£0</p>  
+                  </div>
+
+                </div>
+              </div>
+            </form>
+              <button class="btn" onclick="conOrder()">Continue to Payment</button>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <hr>
+        <div class="footer-container">
+          <ul>
+            <li><a href="#" class="footer-text">Terms & Conditions</a></li>
+            <li><a href="#" class="footer-text">Cookie Policy</a></li>
+            <li><a href="#" class="footer-text">Cookie Settings</a></li>
+          </ul>
+        </div><br>
+         <!-- Social Media Buttons -->
+         <div class="social-btn">
+            <ul>
+              <li><a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a></li>
+              <li><a href="https://en-gb.facebook.com/" class="fa fa-facebook" target="_blank"></a></li>
+              <li><a href="https://www.instagram.com/?hl=en" class="fa fa-instagram" target="_blank"></a></li>
+            </ul>
+        </div>
+      </footer>
+      <script src="order.js"></script>
+</body>
+</html>

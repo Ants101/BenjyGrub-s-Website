@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Food Service">
+    <meta name="keywords" content="BenjyGrub, Sandwich Bar, Sandwich, Food, Drinks">
+    <meta name="author" content="Anthony">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire us</title>
+    <link rel="stylesheet" href="../Order/order.css">
+    <link rel="stylesheet" href="..\nav-footer.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+          <img src="..\Images/BG_Logo.png" alt="BenjyGrub's Logo">
+        </div>
+          <ul class="nav">
+            <li><a href="..\index.html">Home</a></li>
+            <li><a href="..\Menu\menu.html">Menu</a></li>
+            <li><a href="..\Order\order.html">Order</a></li>
+            <li><a class="active" href="#">Hire us</a></li>
+            <li><a href="..\About us\about-us.html">About us</a></li>
+            <li><a href="..\Contact us\contact-us.html">Contact us</a></li>
+          </ul>  
+        </div>
+      </div>
+      <hr>
+      <header>
+        <h2>Hire us</h2>
+      </header>
+      <div class="form-row">
+        <div class="col-75">
+          <div class="form-container">
+            <form action="#">
+              <div class="form-row">
+                <div class="col-50">
+                  <label for="location">Location</label>
+                  <input type="text" name="location" id="loc" placeholder="Example Office, 34 Street Lane">
+                  <label for="date">Date</label>
+                  <input type="text" id="date" name="date" placeholder="12/05/22">
+                  <label for="days">Day/s for hire</label>
+                  <select id="SelectDays" onchange="getHirePrice()">
+                    <option value="Empty" disabled selected>Please select option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <label for="hours">Hours</label>
+                  <select id="SelectHours" onchange="getHirePrice()">
+                    <option value="Empty" disabled selected>Please select option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="5">6</option>
+                    <option value="5">7</option>
+                    <option value="5">8</option>
+                  </select>
+                  <div class="totals">
+                    <label for="total">Total price of hire</label>
+                    <p id="totalHire">£0</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+              <button class="btn" onclick="conHire()">Continue to Payment</button>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <hr>
+        <div class="footer-container">
+          <ul>
+            <li><a href="#" class="footer-text">Terms & Conditions</a></li>
+            <li><a href="#" class="footer-text">Cookie Policy</a></li>
+            <li><a href="#" class="footer-text">Cookie Settings</a></li>
+          </ul>
+        </div><br>
+         <!-- Social Media Buttons -->
+         <div class="social-btn">
+            <ul>
+              <li><a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a></li>
+              <li><a href="https://en-gb.facebook.com/" class="fa fa-facebook" target="_blank"></a></li>
+              <li><a href="https://www.instagram.com/?hl=en" class="fa fa-instagram" target="_blank"></a></li>
+            </ul>
+        </div>
+      </footer>
+      <script>
+        const dayPrice = 30;
+        const hourPrice = 15;
+        function getHirePrice() {
+          var getDayPrice = document.getElementById("SelectDays");
+          var getHourPrice = document.getElementById("SelectHours");
+
+          var i = getDayPrice.selectedIndex;
+          var j = getHourPrice.selectedIndex;
+
+          i = dayPrice * i;
+          j = hourPrice * j;
+          var totalPriceOfHire = i + j;
+
+
+          document.getElementById("totalHire").innerHTML = "£" + totalPriceOfHire;
+        }
+
+        function conHire() {
+          var txt;
+          if (confirm("Are you happy with hiring our serive?")) {
+            alert("Thank you for hiring our serive!");
+            window.location.href = "../Order/payment.html";
+          } else {
+            alert("Try again!");
+          }   
+        }
+      </script>
+</body>
+</html>
