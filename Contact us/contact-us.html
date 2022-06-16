@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Food Service">
+    <meta name="keywords" content="BenjyGrub, Sandwich Bar, Sandwich, Food, Drinks">
+    <meta name="author" content="Anthony">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="../Order/order.css">
+    <link rel="stylesheet" href="..\nav-footer.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+          <img src="..\Images/BG_Logo.png" alt="BenjyGrub's Logo">
+        </div>
+          <ul class="nav">
+            <li><a href="..\index.html">Home</a></li>
+            <li><a href="..\Menu\menu.html">Menu</a></li>
+            <li><a href="..\Order\order.html">Order</a></li>
+            <li><a href="..\Hire us\hire-us.html">Hire us</a></li>
+            <li><a href="..\About us\about-us.html">About us</a></li>
+            <li><a class="active" href="#">Contact us</a></li>
+          </ul>  
+        </div>
+      </div>
+      <hr>
+      <!-- Page Content -->
+      <header>
+        <h2>Contact Us</h2>
+      </header>
+      <div class="form-row">
+        <div class="col-75">
+          <div class="form-container">
+            <form action="#">
+              <div class="form-row">
+                <div class="col-50">
+                  <h3>Contact Form</h3>
+                  <label for="fname"> First Name:</label>
+                  <input type="text" id="fname" name="firstname" placeholder="John" required>
+                  <label for="lname"> Last Name:</label>
+                  <input type="text" id="lname" name="lname" placeholder="Smith" required>
+                  <label for="email"> Email:</label>
+                  <input type="text" id="email" name="email" placeholder="emailaddress@example.com" required>
+                  <label for="subject"> Subject:</label>
+                  <input type="text" id="subject" name="subject" placeholder="Customer service" required>
+                  <label for="message">Message:</label>
+                  <textarea name="message" id="message" placeholder="Write your message here" required></textarea>
+                </div>
+              </div>
+              <input type="submit" value="Submit" class="btn" onclick="conContactForm()">
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <hr>
+        <div class="footer-container">
+          <ul>
+            <li><a href="#" class="footer-text">Terms & Conditions</a></li>
+            <li><a href="#" class="footer-text">Cookie Policy</a></li>
+            <li><a href="#" class="footer-text">Cookie Settings</a></li>
+          </ul>
+        </div><br>
+         <!-- Social Media Buttons -->
+         <div class="social-btn">
+            <ul>
+              <li><a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a></li>
+              <li><a href="https://en-gb.facebook.com/" class="fa fa-facebook" target="_blank"></a></li>
+              <li><a href="https://www.instagram.com/?hl=en" class="fa fa-instagram" target="_blank"></a></li>
+            </ul>
+        </div>
+      </footer>
+      <script>
+        function conContactForm() {
+          alert("Thank you for contacting us!");
+        }
+      </script>
+</body>
+</html>

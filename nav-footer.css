@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* header */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image img {
+    height: 170px;
+    margin: 20px 0px;
+}
+.image {
+    flex-basis: 20%;
+}
+/* Nav bar */
+.text {
+    padding-left: 20px;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+}
+li {
+    float: left;
+}
+.nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 25px;
+    font-size: 20px;
+}
+.nav a:hover {
+    color: rgb(112, 112, 112);
+}
+.nav a.active {
+    color: lightgrey;
+    cursor: default;
+}
+@media screen and (max-width: 950px) {
+    .container {   
+      flex-direction: column;
+    }
+  }
+hr {
+    border: 2px solid rgb(34, 187, 34);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Footer */
+footer {
+    display: block;
+    background-color: rgb(255, 224, 46);
+    margin-top: 40px;
+}
+/* Footer text */
+.footer-text {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 0px 25px;
+}
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+/* Social Media Buttons */
+.social-btn {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .fa {
+    padding: 18px 40px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid rgb(255, 255, 255);
+    margin-bottom: 20px;
+    transition: 0.6s;
+}
+footer .fa:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.footer-text:hover {
+    color: rgb(112, 112, 112);
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    margin-right: 40px;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    margin-right: 40px;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
